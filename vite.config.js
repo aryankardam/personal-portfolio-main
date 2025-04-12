@@ -7,5 +7,9 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
-  base: "/personal-portfolio-main",
+  build: {
+    // Increase chunk warning limit to 2048 KB (2 MB)
+    chunkSizeWarningLimit: 2048,
+  },
+  base: '/',
 })

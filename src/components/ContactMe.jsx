@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
-import emailjs from 'emailjs-com' ; 
+import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
     const [formData , setFormData] = useState({
