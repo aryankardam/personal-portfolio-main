@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
-
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
   }, [menuOpen]);
 
   return (
@@ -19,58 +19,37 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             Aryan<span className="text-blue-500">Kardam</span>
           </NavLink>
 
-          <div
-            className="w-7 h-5 relative cursor-pointer z-50 md:hidden text-white text-3xl flex items-center justify-center"
-            onClick={() => {
-              console.log("Hamburger is clicked");
-              setMenuOpen(prev => !prev);
-            }}
+          {/* Mobile menu toggle */}
+          <button
+            className="md:hidden text-white text-2xl focus:outline-none"
+            onClick={() => setMenuOpen(prev => !prev)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
-            &#9776;
-          </div>
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
 
-          <div className='hidden md:flex items-center space-x-8'>
-            <NavLink
-              to="/"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Home
-            </NavLink>
-
-            <NavLink
-              to="/about"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              About
-            </NavLink>
-
-            <NavLink
-              to="/skills"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Skills & Experience
-            </NavLink>
-
-            <NavLink
-              to="/education"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Education
-            </NavLink>
-
-            <NavLink
-              to="/project"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Projects
-            </NavLink>
-
-            <NavLink
-              to="/contactMe"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Contact Me
-            </NavLink>
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center space-x-8">
+            {[
+              { to: '/', label: 'Home' },
+              { to: '/about', label: 'About' },
+              { to: '/skills', label: 'Skills & Experience' },
+              { to: '/education', label: 'Education' },
+              { to: '/project', label: 'Projects' },
+              { to: '/contactMe', label: 'Contact Me' },
+            ].map(({ to, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) =>
+                  `transition-colors ${
+                    isActive ? 'text-white font-semibold' : 'text-gray-300 hover:text-white'
+                  }`
+                }
+              >
+                {label}
+              </NavLink>
+            ))}
           </div>
         </div>
       </div>

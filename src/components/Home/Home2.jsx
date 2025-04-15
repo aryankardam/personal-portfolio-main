@@ -1,116 +1,78 @@
 import React from "react";
 import myImg from "../../assets/avatar.svg";
 import { NavLink } from "react-router-dom";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 
 const Home2 = () => {
   return (
     <section
       id="home-about"
-      className="min-h-screen flex flex-col md:flex-row items-center place-content-evenly relative bg-black text-gray-100"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-evenly bg-black text-gray-100"
     >
-      <div className="pt-24 pb-5 text-center w-full md:w-8/12 ">
+      {/* Text Section */}
+      <div className="pt-24 pb-5 text-center md:text-left w-full md:w-8/12">
         <h1 className="text-4xl">
           LET ME <span className="text-blue-500">INTRODUCE</span> MYSELF
         </h1>
 
-        <div className="flex flex-row justify-between">
-          <div className="flex justify-items-start">
-            <p className="pt-[50px] text-left text-[1.2em]">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
-              <br />
-              <br />I am fluent in classics like
-              <span className="text-blue-500">
-                <i>
-                  <b>C++, Javascript .</b>
-                </i>
-              </span>
-              <br />
-              <br />
-              My field of Interest's are building new
-              <span className="text-blue-500">
-                <i>
-                  <b> Web Technologies and Products</b>
-                </i>
-              </span>
-              and also in area related to
-              <span className="text-blue-500">
-                {" "}
-                <i>
-                  <b>IOT</b>
-                </i>
-              </span>{" "}
-              (Internet Of Things) .
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with Modern Javascript Library and Frameworks
-              <span className="text-blue-500">
-                <i>
-                  <b> React.js and Next.js</b>
-                </i>
-              </span>
-            </p>
-          </div>
-          <div id="myAvtar" className="w-full md:w-4/12 flex flex-col ml-35">
-            <div className="mb-10">
-              <img src={myImg} alt="MyAvatar" />
-            </div>
-            <div className="flex justify-center space-x-4">
-              <NavLink
-                to="/project"
-                className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] "
-              >
-                View Projects
-              </NavLink>
+        <p className="mt-8 text-[1.2em] leading-relaxed">
+          I fell in love with programming and I have at least learnt something, I think… 🤷‍♂️
+          <br />
+          <br />I am fluent in classics like{' '}
+          <span className="text-blue-500 italic font-bold">C++, JavaScript</span>
+          <br />
+          <br />My fields of interest are building new{' '}
+          <span className="text-blue-500 italic font-bold">Web Technologies and Products</span>{' '}
+          and also in areas related to{' '}
+          <span className="text-blue-500 italic font-bold">IoT</span> (Internet of Things).
+          <br />
+          <br />Whenever possible, I also apply my passion for developing products with modern JavaScript libraries and frameworks like{' '}
+          <span className="text-blue-500 italic font-bold">React.js and Next.js</span>.
+        </p>
 
-              <NavLink
-                to="/contactMe"
-                className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 
-             hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10"
-              >
-                Contact Me
-              </NavLink>
-            </div>
-          </div>
+        {/* Buttons */}
+        <div className="mt-8 flex flex-col sm:flex-row sm:space-x-4 items-center justify-center md:justify-start">
+          <NavLink
+            to="/project"
+            className="mb-4 sm:mb-0 bg-blue-500 text-white py-3 px-6 rounded font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg"
+          >
+            View Projects
+          </NavLink>
+          <NavLink
+            to="/contactMe"
+            className="bg-transparent border border-blue-500 text-blue-500 py-3 px-6 rounded font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:bg-blue-500/10"
+          >
+            Contact Me
+          </NavLink>
         </div>
 
-        <div className="w-full md:w-full text-center pt-[25px]">
-          <h1>FIND ME ON</h1>
-          <p>
-            Feel free to <span className="text-blue-500">connect </span>with me
+        {/* Social Links */}
+        <div className="mt-12 text-center md:text-left">
+          <h2 className="text-2xl">FIND ME ON</h2>
+          <p className="mt-2">
+            Feel free to <span className="text-blue-500">connect</span> with me
           </p>
-
-          <ul className="flex relative pt-[15px] pl-0 justify-center flex-row m-auto">
-            <li className="inline-block px-[15px]">
+          <ul className="mt-4 flex justify-center md:justify-start space-x-4">
+            <li>
               <a
-                href="https://www.linkedin.com/in/aryan-kardam-b94b16296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                href="https://www.linkedin.com/in/aryan-kardam-b94b16296"
                 target="_blank"
                 rel="noreferrer"
-                className="group relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-black transition-all duration-500 hover:bg-[#0A66C2] hover:shadow-[0_0_8px_#0A66C2]"
+                className="group relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-black transition-transform hover:scale-110 hover:bg-[#0A66C2] hover:shadow-lg"
               >
-                {/* Icon */}
-                <FaLinkedinIn className="z-10 text-xl transition-colors duration-500 group-hover:text-white" />
-
-                {/* Animated background circle */}
-                <span className="absolute inset-0 rounded-full bg-[#0A66C2] scale-90 z-0 transition-transform duration-500 group-hover:scale-110 group-hover:shadow-[0_0_15px_#0A66C2]" />
+                <FaLinkedinIn className="z-10 text-xl group-hover:text-white" />
+                <span className="absolute inset-0 rounded-full bg-[#0A66C2] opacity-0 group-hover:opacity-100 transition-opacity"></span>
               </a>
             </li>
             <li>
               <a
-                href="https://www.instagram.com/aryan_kardam?igsh=OXZtZ3o4enoyejJ1"
+                href="https://www.instagram.com/aryan_kardam"
                 target="_blank"
                 rel="noreferrer"
-                className="group relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-black transition-all duration-500 hover:bg-gradient-to-tr hover:from-pink-500 hover:via-purple-500 hover:to-yellow-400 hover:shadow-[0_0_8px_rgba(236,72,153,0.7)]"
+                className="group relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-black transition-transform hover:scale-110 hover:bg-gradient-to-tr hover:from-pink-500 hover:via-purple-500 hover:to-yellow-400 hover:shadow-lg"
               >
-                {/* Icon */}
-                <FaInstagram className="z-10 text-xl transition-colors duration-500 group-hover:text-white" />
-
-                {/* Animated background circle */}
-                <span className="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-400 scale-90 z-0 transition-transform duration-500 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(236,72,153,0.7)]" />
+                <FaInstagram className="z-10 text-xl group-hover:text-white" />
+                <span className="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
               </a>
             </li>
             <li>
@@ -118,20 +80,19 @@ const Home2 = () => {
                 href="https://github.com/aryankardam"
                 target="_blank"
                 rel="noreferrer"
-                className="group relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-purple-500 transition-all duration-300 ml-3"
+                className="group relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-purple-500 transition-transform hover:scale-110 hover:bg-purple-500 hover:shadow-lg"
               >
-                {/* Icon */}
-                <FaGithub className="z-10 text-xl" />
-
-                {/* Hover overlay */}
-                <span className="absolute inset-0 rounded-full bg-purple-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
-
-                {/* Icon color on hover */}
-                <FaGithub className="absolute z-20 text-xl text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <FaGithub className="z-10 text-xl group-hover:text-white" />
+                <span className="absolute inset-0 rounded-full bg-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
               </a>
             </li>
           </ul>
         </div>
+      </div>
+
+      {/* Avatar Section */}
+      <div className="w-6/12 hidden md:flex justify-center">
+        <img src={myImg} alt="My Avatar" className="max-w-xs" />
       </div>
     </section>
   );
