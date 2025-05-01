@@ -7,11 +7,11 @@ const Home2 = () => {
   return (
     <section
       id="home-about"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-evenly bg-black text-gray-100"
+      className="min-h-screen flex flex-col md:flex-row item-center justify-evenly bg-black text-gray-100"
     >
       {/* Text Section */}
       <div className="pt-24 pb-5 text-center md:text-left w-full md:w-8/12">
-        <h1 className="text-4xl">
+        <h1 className="text-4xl text-center">
           LET ME <span className="text-blue-500">INTRODUCE</span> MYSELF
         </h1>
 
@@ -31,7 +31,7 @@ const Home2 = () => {
         </p>
 
         {/* Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row sm:space-x-4 items-center justify-center md:justify-start">
+        <div className="mt-8 flex flex-col sm:flex-row sm:space-x-4 items-center justify-center">
           <NavLink
             to="/project"
             className="mb-4 sm:mb-0 bg-blue-500 text-white py-3 px-6 rounded font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg"
@@ -47,12 +47,12 @@ const Home2 = () => {
         </div>
 
         {/* Social Links */}
-        <div className="mt-12 text-center md:text-left">
+        <div className="mt-12  md:text-center">
           <h2 className="text-2xl">FIND ME ON</h2>
           <p className="mt-2">
             Feel free to <span className="text-blue-500">connect</span> with me
           </p>
-          <ul className="mt-4 flex justify-center md:justify-start space-x-4">
+          <ul className="mt-4 flex justify-center md:justify-center space-x-4">
             <li>
               <a
                 href="https://www.linkedin.com/in/aryan-kardam-b94b16296"
@@ -91,9 +91,10 @@ const Home2 = () => {
       </div>
 
       {/* Avatar Section */}
-      <div className="w-6/12 hidden md:flex justify-center">
-        <img src={myImg} alt="My Avatar" className="max-w-xs" />
+      <div className="w-full md:w-6/12 flex justify-center items-center mx-auto mt-8">
+        <img src={myImg} alt="My Avatar" className="max-w-[200px] md:max-w-xs w-full h-auto rounded-full" />
       </div>
+
     </section>
   );
 };
