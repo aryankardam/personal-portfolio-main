@@ -18,22 +18,30 @@ const Home2 = () => {
         <p className="mt-8 text-[1.2em] leading-relaxed">
           I’m a final-year B.Tech student majoring in Electronics and Communication Engineering at IIIT Kottayam, with a strong passion for developing end-to-end web solutions and intelligent IoT systems.
           <br />
-          <br />💻 I build full-stack web apps using the MERN Stack {' '}
+          <ul className="flex flex-col flex-wrap gap-4 mt-2">
+            <li>
+              💻 I build full-stack web apps using the MERN Stack {' '}
           <span className="text-blue-500 italic font-bold">(MongoDB, Express.js, React.js, Node.js)</span>
-          <br />
-          <br />🎯 I integrate real-time systems using{' '}
+            </li>
+            <li>
+              🎯 I integrate real-time systems using{' '}
           <span className="text-blue-500 italic font-bold">Socket.IO</span>{' '}
           , secure APIs with{' '}
           <span className="text-blue-500 italic font-bold">JWT, </span>and handle cloud storage with{' '}
           <span className="text-blue-500 italic font-bold"> Cloudinary</span>
-          <br />
-          <br />⚡ I develop interactive frontend interfaces using{' '}
+            </li>
+            <li>
+              ⚡ I develop interactive frontend interfaces using{' '}
           <span className="text-blue-500 italic font-bold">React.js, Tailwind CSS, Redux, and Framer Motion</span>.
-          <br />
-          <br />🤖 I create smart IoT devices using {' '}<span className="text-blue-500 italic font-bold">Arduino, ESP8266, sensors, </span> and automation logic
-          <br />
-          <br />🧠 I explore{' '}
+            </li>
+            <li>
+              🤖 I create smart IoT devices using {' '}<span className="text-blue-500 italic font-bold">Arduino, ESP8266, sensors, </span> and automation logic
+            </li>
+            <li>
+              🧠 I explore{' '}
           <span className="text-blue-500 italic font-bold">Machine Learning</span>concepts and apply them in practical projects
+            </li>
+          </ul>
         </p>
 
         {/* Buttons */}
