@@ -12,22 +12,28 @@ const Home2 = () => {
       {/* Text Section */}
       <div className="pt-24 pb-5 text-center md:text-left w-full md:w-8/12">
         <h1 className="text-4xl text-center">
-          LET ME <span className="text-blue-500">INTRODUCE</span> MYSELF
+          🚀 ABOUT  <span className="text-blue-500">ME</span>
         </h1>
 
         <p className="mt-8 text-[1.2em] leading-relaxed">
-          I fell in love with programming and I have at least learnt something, I think… 🤷‍♂️
+          I’m a final-year B.Tech student majoring in Electronics and Communication Engineering at IIIT Kottayam, with a strong passion for developing end-to-end web solutions and intelligent IoT systems.
           <br />
-          <br />I am fluent in classics like{' '}
-          <span className="text-blue-500 italic font-bold">C++, JavaScript</span>
+          <br />💻 I build full-stack web apps using the MERN Stack {' '}
+          <span className="text-blue-500 italic font-bold">(MongoDB, Express.js, React.js, Node.js)</span>
           <br />
-          <br />My fields of interest are building new{' '}
-          <span className="text-blue-500 italic font-bold">Web Technologies and Products</span>{' '}
-          and also in areas related to{' '}
-          <span className="text-blue-500 italic font-bold">IoT</span> (Internet of Things).
+          <br />🎯 I integrate real-time systems using{' '}
+          <span className="text-blue-500 italic font-bold">Socket.IO</span>{' '}
+          , secure APIs with{' '}
+          <span className="text-blue-500 italic font-bold">JWT, </span>and handle cloud storage with{' '}
+          <span className="text-blue-500 italic font-bold"> Cloudinary</span>
           <br />
-          <br />Whenever possible, I also apply my passion for developing products with modern JavaScript libraries and frameworks like{' '}
-          <span className="text-blue-500 italic font-bold">React.js and Next.js</span>.
+          <br />⚡ I develop interactive frontend interfaces using{' '}
+          <span className="text-blue-500 italic font-bold">React.js, Tailwind CSS, Redux, and Framer Motion</span>.
+          <br />
+          <br />🤖 I create smart IoT devices using {' '}<span className="text-blue-500 italic font-bold">Arduino, ESP8266, sensors, </span> and automation logic
+          <br />
+          <br />🧠 I explore{' '}
+          <span className="text-blue-500 italic font-bold">Machine Learning</span>concepts and apply them in practical projects
         </p>
 
         {/* Buttons */}

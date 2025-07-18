@@ -15,8 +15,58 @@ import guessingGameImg from '../assets/guessingGameImg.png';
 import keyLoggerImg from '../assets/keyLoggerImg.png';
 import ticTacToeImg from '../assets/ticTacToeImg.png';
 import quickSignImg from '../assets/quickSignImg.png';
+import chessGameImg from '../assets/chessGameImg.png';
+import strengthLabzImg from '../assets/strengthLabzImg.png';
+import loginAuthImg from '../assets/loginAuthImg.png';
+import ecommerceImg from '../assets/ecommerceImg.png';
 
 const projects = [
+  {
+    title: 'StrengthLabz',
+    description:
+      'A full-stack eCommerce platform built with the MERN stack featuring secure authentication, real-time cart updates with Socket.IO, payment gateway integration via Razorpay, and an admin dashboard for managing products and orders.',
+    techStack: [
+      'React.js',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Cloudinary',
+      'Razorpay',
+      'JWT',
+      'Socket.IO',
+    ],
+    image: strengthLabzImg, // replace with your imported image variable
+    repo: 'https://github.com/aryankardam/StrengthLabz',
+    live: 'https://strength-labz-git-main-aryan-kardams-projects.vercel.app/',
+  },
+   {
+    title: 'Chess Game',
+    description:
+      'A real-time multiplayer chess game built with Socket.IO for seamless game state synchronization. Supports multiplayer matches with real-time interaction and game logic powered by Chess.js.',
+    techStack: ['Node.js', 'Socket.IO', 'Express.js', 'Chess.js', 'HTML', 'CSS'],
+    image: chessGameImg,  // replace with your imported image variable
+    repo: 'https://github.com/aryankardam/ChessGame',
+    live: '', // add live demo URL if any
+  },
+  {
+    title: 'Login and Authorization System',
+    description:
+      'A robust login and authorization system implemented using JWT, Node.js, and Express.js. Supports secure user registration, authentication, role-based access control, and token management.',
+    techStack: ['Node.js', 'Express.js', 'JWT', 'Bcrypt.js', 'MongoDB', 'Postman'],
+    image: loginAuthImg, // replace with your imported image variable
+    repo: 'https://github.com/aryankardam/LoginAndRegistration', // add repo URL if separate
+    live: '', // add live demo URL if any
+  },
+  {
+    title: 'eCommerce Website',
+    description:
+      'A complete online store platform including product listing, cart management, secure checkout, and payment processing. Built using React for frontend and Node.js backend with RESTful APIs.',
+    techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Cloudinary', 'Razorpay'],
+    image: ecommerceImg, // replace with your imported image variable
+    repo: 'https://github.com/aryankardam/EcommerceWebsite', // add repo URL if separate
+    live: '', // add live demo URL if any
+  },
   {
     title: 'Human-Following Robot',
     description:

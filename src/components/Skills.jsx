@@ -8,7 +8,11 @@ import {
   FaNodeJs,
   FaGithub,
   FaLaptopCode,
+  FaBootstrap,
+  FaLock,
+  FaCode,
 } from 'react-icons/fa';
+
 import {
   SiTailwindcss,
   SiArduino,
@@ -16,29 +20,58 @@ import {
   SiMongodb,
   SiC,
   SiCplusplus,
+  SiNextdotjs,
+  SiRedux,
+  SiReactrouter,
+  SiFramer,
+  SiExpress,
+  SiPostman,
+  SiRailway,
+  SiRender,
+  SiRazorpay,
+  SiCloudinary,
+  SiSocketdotio,
+  SiJsonwebtokens,
 } from 'react-icons/si';
 
 const languages = [
   { icon: <SiC />, name: 'C' },
   { icon: <SiCplusplus />, name: 'C++' },
   { icon: <FaHtml5 />, name: 'HTML5' },
+  { icon: <FaCss3Alt />, name: 'CSS3' },
   { icon: <FaJs />, name: 'JavaScript' },
   { icon: <SiPython />, name: 'Python' },
+  { icon: <FaLaptopCode />, name: 'MATLAB' },
 ];
 
 const frameworks = [
-  { icon: <FaCss3Alt />, name: 'CSS3' },
-  { icon: <FaReact />, name: 'React' },
-  { icon: <FaNodeJs />, name: 'Node.js' },
+  { icon: <FaReact />, name: 'React.js' },
+  { icon: <SiNextdotjs />, name: 'Next.js' },
   { icon: <SiTailwindcss />, name: 'Tailwind CSS' },
+  { icon: <FaBootstrap />, name: 'Bootstrap' },
+  { icon: <SiRedux />, name: 'Redux' },
+  { icon: <SiReactrouter />, name: 'React Router' },
+  { icon: <SiFramer />, name: 'Framer Motion' },
+  { icon: <FaNodeJs />, name: 'Node.js' },
+  { icon: <SiExpress />, name: 'Express.js' },
   { icon: <SiMongodb />, name: 'MongoDB' },
+  { icon: <FaLock />, name: 'Bcrypt.js' },       // replaced SiBcrypt with FaLock
+  { icon: <SiSocketdotio />, name: 'Socket.IO' },
+  { icon: <SiJsonwebtokens />, name: 'JWT' },
+  { icon: <FaCode />, name: 'REST APIs' },       // replaced SiRest with FaCode
+  { icon: <SiMongodb />, name: 'Mongoose' },
 ];
 
 const tools = [
   { icon: <FaGithub />, name: 'GitHub' },
+  { icon: <SiPostman />, name: 'Postman' },
+  { icon: <SiRailway />, name: 'Railway' },
+  { icon: <SiRender />, name: 'Render' },
+  { icon: <SiRazorpay />, name: 'Razorpay' },
+  { icon: <SiCloudinary />, name: 'Cloudinary' },
   { icon: <SiArduino />, name: 'Arduino' },
-  { icon: <FaLaptopCode />, name: 'MATLAB' }, // Placeholder icon
 ];
+
 
 const Skills = () => {
   return (
@@ -53,7 +86,7 @@ const Skills = () => {
       </h2>
 
       <p className="text-center text-gray-300 max-w-3xl mx-auto mb-12">
-        As a frontend developer and electronics enthusiast, I’ve built projects using modern tech like React, Tailwind CSS, ESP8266, and Arduino. Here’s what I work with:
+        As a passionate frontend developer and electronics engineer, I specialize in building scalable and user-centric applications using modern technologies such as React.js, Tailwind CSS, Node.js, and Socket.IO. I also have hands-on experience with IoT devices using Arduino and ESP8266, integrating hardware and software to deliver innovative solutions. Below is an overview of my key skills and expertise:
       </p>
 
       <div className="space-y-12">
@@ -129,7 +162,7 @@ const Skills = () => {
         ease: 'linear',
       }}
     >
-      Adding soon... &nbsp;  &nbsp; Adding soon... &nbsp;  &nbsp; Adding soon... 
+      Yet to done... &nbsp;  &nbsp; Yet to done... &nbsp;  &nbsp; Yet to done... 
     </motion.div>
   </div>
 </div>

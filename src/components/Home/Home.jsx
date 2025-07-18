@@ -50,9 +50,9 @@ const Home = () => {
         </h1>
 
         <p className="text-gray-400 text-lg mb-8 max-w-lg">
-          <b>Electronics and Communication Engineering Student</b>
+          <b>Full Stack Developer | IoT Innovator |</b>
           <br />
-          A third-year undergraduate engineering student at{' '}
+          Final-Year ECE Undergraduate at{' '}
           <b>Indian Institute of Information Technology Kottayam.</b>
         </p>
       </motion.div>
