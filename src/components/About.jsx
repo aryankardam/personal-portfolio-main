@@ -72,7 +72,7 @@ const About = () => {
 
           <div className="mt-8">
             <a
-              href="https://drive.google.com/file/d/1GSDOYO4xcid2hOzf4LWoZIl8itHyurmV/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1R1zDIoRTQRohPXYzXCsw_nzGLrSGSSFx/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-md hover:bg-blue-700 transition duration-300"

@@ -11,6 +11,10 @@ import {
   FaBootstrap,
   FaLock,
   FaCode,
+  FaBriefcase,
+  FaCalendarAlt,
+  FaMapMarkerAlt,
+  FaCheckCircle,
 } from 'react-icons/fa';
 
 import {
@@ -55,10 +59,10 @@ const frameworks = [
   { icon: <FaNodeJs />, name: 'Node.js' },
   { icon: <SiExpress />, name: 'Express.js' },
   { icon: <SiMongodb />, name: 'MongoDB' },
-  { icon: <FaLock />, name: 'Bcrypt.js' },       // replaced SiBcrypt with FaLock
+  { icon: <FaLock />, name: 'Bcrypt.js' },
   { icon: <SiSocketdotio />, name: 'Socket.IO' },
   { icon: <SiJsonwebtokens />, name: 'JWT' },
-  { icon: <FaCode />, name: 'REST APIs' },       // replaced SiRest with FaCode
+  { icon: <FaCode />, name: 'REST APIs' },
   { icon: <SiMongodb />, name: 'Mongoose' },
 ];
 
@@ -72,103 +76,214 @@ const tools = [
   { icon: <SiArduino />, name: 'Arduino' },
 ];
 
+const experience = {
+  company: 'ADM TutorX',
+  role: 'Frontend Developer Intern',
+  duration: 'Aug 2024 – Present',
+  location: 'Remote',
+  achievements: [
+    'Engineered responsive and modular UI components using React.js and Tailwind CSS, improving load efficiency and user engagement',
+    'Collaborated with backend engineers to integrate REST APIs, streamlining data rendering and dashboard performance',
+    'Enhanced reusability and reduced code redundancy by 30% through optimized component architecture',
+    'Participated in Agile sprints, code reviews, and product demos to ensure delivery alignment with project goals',
+  ],
+  skills: ['React.js', 'Tailwind CSS', 'REST APIs', 'GitHub', 'Team Collaboration'],
+};
 
 const Skills = () => {
   return (
-    <motion.section
-      className="max-w-5xl mx-auto py-16 px-4 text-white"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <h2 className="text-4xl font-bold text-center mb-8">
-        <span className="text-blue-500">Skills</span> & Experience
-      </h2>
+    <div className="bg-black min-h-screen">
+      <motion.section
+        className="max-w-6xl mx-auto py-16 px-4 text-white"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        {/* Main Header */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-5xl font-bold mb-4">
+            Professional <span className="text-blue-500">Profile</span>
+          </h1>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            Full-Stack Developer | IoT Innovator 
+          </p>
+        </motion.div>
 
-      <p className="text-center text-gray-300 max-w-3xl mx-auto mb-12">
-        As a passionate frontend developer and electronics engineer, I specialize in building scalable and user-centric applications using modern technologies such as React.js, Tailwind CSS, Node.js, and Socket.IO. I also have hands-on experience with IoT devices using Arduino and ESP8266, integrating hardware and software to deliver innovative solutions. Below is an overview of my key skills and expertise:
-      </p>
-
-      <div className="space-y-12">
-        {/* Programming Languages */}
-        <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-4 inline-flex items-center justify-center gap-3">
-            Programming <span className="text-blue-500">Languages</span>
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-            {languages.map((lang, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col items-center justify-center p-4 border border-white rounded-lg hover:scale-105 transition-transform duration-300"
-                whileHover={{ scale: 1.1 }}
-              >
-                <div className="text-4xl text-blue-400 mb-2">{lang.icon}</div>
-                <span className="text-sm text-gray-200">{lang.name}</span>
-              </motion.div>
-            ))}
+        {/* Professional Experience Section - Priority Position */}
+        <motion.div
+          className="mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="flex items-center gap-3 mb-8">
+            <FaBriefcase className="text-blue-500 text-3xl" />
+            <h2 className="text-4xl font-bold">
+              Professional <span className="text-blue-500">Experience</span>
+            </h2>
           </div>
-        </div>
 
-        {/* Frameworks and Libraries */}
-        <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-4 inline-flex items-center justify-center gap-3">
-            Frameworks / <span className="text-blue-500">Libraries</span>
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-            {frameworks.map((fw, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col items-center justify-center p-4 border border-white rounded-lg hover:scale-105 transition-transform duration-300"
-                whileHover={{ scale: 1.1 }}
-              >
-                <div className="text-4xl text-blue-400 mb-2">{fw.icon}</div>
-                <span className="text-sm text-gray-200">{fw.name}</span>
-              </motion.div>
-            ))}
+          <motion.div
+            className="bg-gray-800/50 backdrop-blur-sm border-l-4 border-blue-500 rounded-lg p-8 shadow-2xl hover:shadow-blue-500/10 transition-all duration-300"
+            whileHover={{ scale: 1.01 }}
+          >
+            {/* Company and Role Header */}
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6 pb-6 border-b border-gray-700">
+              <div>
+                <h3 className="text-3xl font-bold text-white mb-2">{experience.role}</h3>
+                <p className="text-2xl text-blue-400 font-semibold mb-4">{experience.company}</p>
+              </div>
+              <div className="flex flex-col gap-2 text-gray-300">
+                <div className="flex items-center gap-2 bg-gray-700/50 px-4 py-2 rounded-lg">
+                  <FaCalendarAlt className="text-blue-400" />
+                  <span className="font-medium">{experience.duration}</span>
+                </div>
+                <div className="flex items-center gap-2 bg-gray-700/50 px-4 py-2 rounded-lg">
+                  <FaMapMarkerAlt className="text-blue-400" />
+                  <span className="font-medium">{experience.location}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Key Achievements */}
+            <div className="mb-6">
+              <h4 className="text-xl font-semibold text-gray-200 mb-4 flex items-center gap-2">
+                <FaCheckCircle className="text-green-400" />
+                Key Contributions & Impact
+              </h4>
+              <ul className="space-y-4">
+                {experience.achievements.map((achievement, index) => (
+                  <motion.li
+                    key={index}
+                    className="flex items-start gap-3 text-gray-300 leading-relaxed"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                  >
+                    <span className="text-blue-400 text-xl mt-0.5 flex-shrink-0">•</span>
+                    <span className="text-base">{achievement}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Technologies */}
+            <div>
+              <h4 className="text-xl font-semibold text-gray-200 mb-4">Technologies & Tools</h4>
+              <div className="flex flex-wrap gap-3">
+                {experience.skills.map((skill, index) => (
+                  <motion.span
+                    key={index}
+                    className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg text-sm font-semibold text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-200"
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.7 + index * 0.05 }}
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Technical Skills Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-3">
+              Technical <span className="text-blue-500">Skills</span>
+            </h2>
+            <p className="text-gray-400 max-w-3xl mx-auto">
+              Proficient in modern web technologies and development tools with hands-on experience in building scalable applications
+            </p>
           </div>
-        </div>
 
-        {/* Tools */}
-        <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-4 inline-flex items-center justify-center gap-3">
-            <span className="text-blue-500">Tools</span> I Use
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-            {tools.map((tool, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col items-center justify-center p-4 border border-white rounded-lg hover:scale-105 transition-transform duration-300"
-                whileHover={{ scale: 1.1 }}
-              >
-                <div className="text-4xl text-blue-400 mb-2">{tool.icon}</div>
-                <span className="text-sm text-gray-200">{tool.name}</span>
-              </motion.div>
-            ))}
+          <div className="space-y-16">
+            {/* Programming Languages */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+                <span className="text-blue-500">01.</span> Programming Languages
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                {languages.map((lang, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex flex-col items-center justify-center p-5 bg-gray-800/40 border border-gray-700 rounded-lg hover:border-blue-500 hover:bg-gray-800/60 transition-all duration-300 group"
+                    whileHover={{ scale: 1.08, y: -5 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
+                  >
+                    <div className="text-5xl text-blue-400 mb-3 group-hover:text-blue-300 transition-colors">
+                      {lang.icon}
+                    </div>
+                    <span className="text-sm text-gray-300 font-medium">{lang.name}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Frameworks and Libraries */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+                <span className="text-blue-500">02.</span> Frameworks & Libraries
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                {frameworks.map((fw, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex flex-col items-center justify-center p-5 bg-gray-800/40 border border-gray-700 rounded-lg hover:border-blue-500 hover:bg-gray-800/60 transition-all duration-300 group"
+                    whileHover={{ scale: 1.08, y: -5 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.8 + index * 0.04 }}
+                  >
+                    <div className="text-5xl text-blue-400 mb-3 group-hover:text-blue-300 transition-colors">
+                      {fw.icon}
+                    </div>
+                    <span className="text-sm text-gray-300 font-medium text-center">{fw.name}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools & Platforms */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+                <span className="text-blue-500">03.</span> Tools & Platforms
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                {tools.map((tool, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex flex-col items-center justify-center p-5 bg-gray-800/40 border border-gray-700 rounded-lg hover:border-blue-500 hover:bg-gray-800/60 transition-all duration-300 group"
+                    whileHover={{ scale: 1.08, y: -5 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 1.0 + index * 0.05 }}
+                  >
+                    <div className="text-5xl text-blue-400 mb-3 group-hover:text-blue-300 transition-colors">
+                      {tool.icon}
+                    </div>
+                    <span className="text-sm text-gray-300 font-medium">{tool.name}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-
-        {/* Experience Section */}
-<div className="text-center mt-16 overflow-hidden">
-  <h3 className="text-4xl font-semibold mb-4">
-    <span className="text-blue-100">Experience</span>
-  </h3>
-  <div className="relative h-10 w-full overflow-hidden">
-    <motion.div
-      className="absolute whitespace-nowrap text-lg text-blue-400 font-medium"
-      animate={{ x: ['100%', '-100%'] }}
-      transition={{
-        repeat: Infinity,
-        duration: 6,
-        ease: 'linear',
-      }}
-    >
-      Yet to done... &nbsp;  &nbsp; Yet to done... &nbsp;  &nbsp; Yet to done... 
-    </motion.div>
-  </div>
-</div>
-
-      </div>
-    </motion.section>
+        </motion.div>
+      </motion.section>
+    </div>
   );
 };
 
