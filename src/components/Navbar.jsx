@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaGraduationCap, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import {
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaUser,
+  FaCode,
+  FaGraduationCap,
+  FaProjectDiagram,
+  FaEnvelope
+} from 'react-icons/fa';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,11 +27,11 @@ const Navbar = () => {
   }, [location]);
 
   const navLinks = [
-    { path: '/', label: 'Home', icon: <FaHome /> },
-    { path: '/about', label: 'About', icon: <FaUser /> },
+    { path: '/', label: 'Home', icon: <FaHome /> }, 
     { path: '/skills', label: 'Skills & Experience', icon: <FaCode /> },
-    { path: '/education', label: 'Education', icon: <FaGraduationCap /> },
     { path: '/project', label: 'Projects', icon: <FaProjectDiagram /> },
+    { path: '/education', label: 'Education', icon: <FaGraduationCap /> },
+    { path: '/about', label: 'About', icon: <FaUser /> },
     { path: '/contactMe', label: 'Contact Me', icon: <FaEnvelope /> },
   ];
 
@@ -31,6 +40,7 @@ const Navbar = () => {
       <nav className="fixed top-0 w-full z-50 bg-[rgba(10,10,10,0.95)] backdrop-blur-lg border-b border-white/10 shadow-lg">
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
+
             {/* Brand */}
             <NavLink
               to="/"
@@ -40,16 +50,13 @@ const Navbar = () => {
               Aryan<span className="text-blue-500">Kardam</span>
             </NavLink>
 
-            {/* Hamburger / Close Button for Mobile */}
+            {/* Mobile Toggle */}
             <button
-              className="md:hidden text-white text-2xl cursor-pointer z-[70] p-2 hover:text-blue-500 transition-colors active:scale-95 relative"
+              className="md:hidden text-white text-2xl cursor-pointer z-[70] p-2 hover:text-blue-500 transition-colors active:scale-95"
               onClick={(e) => {
                 e.stopPropagation();
                 setMenuOpen(prev => !prev);
               }}
-              aria-label="Toggle menu"
-              aria-expanded={menuOpen}
-              type="button"
             >
               {menuOpen ? <FaTimes /> : <FaBars />}
             </button>
@@ -71,43 +78,68 @@ const Navbar = () => {
                   {link.label}
                 </NavLink>
               ))}
+
+              {/* ============================
+                    INDUSTRY-GRADE RESUME BUTTON
+                  ============================ */}
+              <a
+                href="https://drive.google.com/file/d/1R1zDIoRTQRohPXYzXCsw_nzGLrSGSSFx/view?usp=sharing"
+                download
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500 text-blue-400 hover:text-white 
+                hover:bg-blue-600/20 backdrop-blur-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/20"
+              >
+                <span className="text-sm font-medium">Resume</span>
+
+                {/* Minimal download icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.7}
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 16.5l4.5-4.5m-4.5 4.5L7.5 12m4.5 4.5V3"
+                  />
+                </svg>
+              </a>
             </div>
+
           </div>
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Overlay */}
       {menuOpen && (
         <div
           className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[55] md:hidden animate-fadeIn"
           onClick={() => setMenuOpen(false)}
-          style={{ touchAction: 'none' }}
         />
       )}
 
-      {/* Mobile Menu Sidebar */}
+      {/* Mobile Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-gray-900 to-gray-800 shadow-2xl z-[65] md:hidden transform transition-transform duration-300 ease-in-out ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         style={{ maxWidth: '85vw' }}
       >
-        {/* Header */}
+        {/* Sidebar Header */}
         <div className="bg-gray-900/50 border-b border-gray-700 p-6 flex justify-between items-center">
-          <span className="font-mono text-lg font-bold text-white">
-            Menu
-          </span>
+          <span className="font-mono text-lg font-bold text-white">Menu</span>
           <button
             onClick={() => setMenuOpen(false)}
-            className="text-white text-2xl p-2 hover:text-blue-500 transition-colors hover:rotate-90 transform duration-200"
-            aria-label="Close menu"
+            className="text-white text-2xl p-2 hover:text-blue-500 transition-colors hover:rotate-90 duration-200"
           >
             <FaTimes />
           </button>
         </div>
 
-        {/* Navigation Links */}
-        <div className="flex flex-col pt-6 px-4 space-y-2 overflow-y-auto h-[calc(100%-80px)]">
+        {/* Mobile Nav Links */}
+        <div className="flex flex-col pt-6 px-4 space-y-2 overflow-y-auto h-[calc(100%-150px)]">
           {navLinks.map((link, index) => (
             <NavLink
               key={link.path}
@@ -120,20 +152,29 @@ const Navbar = () => {
                     : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
                 }`
               }
-              style={{
-                animationDelay: `${index * 50}ms`,
-              }}
+              style={{ animationDelay: `${index * 50}ms` }}
             >
-              {({ isActive }) => (
-                <>
-                  <span className={`text-xl ${isActive ? 'text-white' : 'text-blue-400 group-hover:text-blue-300'}`}>
-                    {link.icon}
-                  </span>
-                  <span>{link.label}</span>
-                </>
-              )}
+              <>
+                <span className="text-xl text-blue-400 group-hover:text-blue-300">
+                  {link.icon}
+                </span>
+                <span>{link.label}</span>
+              </>
             </NavLink>
           ))}
+        </div>
+
+        {/* ============================
+             MOBILE RESUME BUTTON
+        ============================ */}
+        <div className="p-6 border-t border-gray-700">
+          <a
+            href="https://drive.google.com/file/d/1R1zDIoRTQRohPXYzXCsw_nzGLrSGSSFx/view?usp=sharing"
+            target="_blank"
+            className="block w-full text-center py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition shadow-md shadow-blue-600/20"
+          >
+            Resume
+          </a>
         </div>
       </div>
 

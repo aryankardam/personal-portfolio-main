@@ -53,6 +53,7 @@ const Home = () => {
           <b>Full Stack Developer | IoT Innovator |</b>
           <br />
           Final-Year ECE Undergraduate at{' '}
+          <br />
           <b>Indian Institute of Information Technology Kottayam.</b>
         </p>
       </motion.div>

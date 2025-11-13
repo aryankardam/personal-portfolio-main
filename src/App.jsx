@@ -44,11 +44,10 @@ export default function App() {
           element: (
             <>
               <Home />
-              <Home2 />
-              <About />
               <Skills />
-              <Education />
               <Projects />
+              <Education />
+              <About />
               <ContactMe />
             </>
           ),

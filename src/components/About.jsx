@@ -2,9 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import laptopImg from "../assets/about.png";
 import { ImPointRight } from "react-icons/im";
+import Home2 from "./Home/Home2";
 
 const About = () => {
   return (
+    <>
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <Home2/>
+    </motion.section>
     <motion.section
       className="min-h-screen flex items-center justify-center px-4 py-12 text-white"
       initial={{ opacity: 0, y: 30 }}
@@ -92,6 +101,7 @@ const About = () => {
         </div>
       </div>
     </motion.section>
+    </>
   );
 };
 
