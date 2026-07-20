@@ -24,10 +24,46 @@ import chessGameImg from "../assets/chessGameImg.png";
 import strengthLabzImg from "../assets/strengthLabzImg.png";
 import loginAuthImg from "../assets/loginAuthImg.png";
 import ecommerceImg from "../assets/ecommerceImg.png";
+import negamCareImg from "../assets/negamCareImg.jpg"
 
 // --- Categorized Projects ---
 const projects = {
   featured: [
+{
+  title: "NegamCare",
+
+  tagline: "Healthcare Website | Stemz Healthcare",
+
+  description:
+    "Designed and developed the official NegamCare healthcare website as part of my Web Development Internship at Stemz Healthcare, delivering a responsive, user-centric experience while strengthening the company's online presence.",
+
+  highlights: [
+    "Internship Project at Stemz Healthcare",
+    "Responsive Healthcare Website",
+    "Modern React Architecture",
+    "Reusable UI Components",
+    "SEO & Performance Optimizations",
+    "Improved User Experience"
+  ],
+
+  techStack: [
+    "React.js",
+    "Tailwind CSS",
+    "JavaScript",
+    "React Router",
+    "Framer Motion"
+  ],
+
+  category: "Internship Project",
+
+  status: "Completed",
+
+  image: negamCareImg,
+
+  repo: "https://github.com/aryankardam/NegamCareSH",
+
+  live: "https://negam-care-sh.vercel.app/",
+},
     {
       title: "StrengthLabz",
       description:

@@ -27,11 +27,11 @@ const Navbar = () => {
   }, [location]);
 
   const navLinks = [
-    { path: '/', label: 'Home', icon: <FaHome /> }, 
+    { path: '/', label: 'Home', icon: <FaHome /> },
+    { path: '/about', label: 'About', icon: <FaUser /> },
     { path: '/skills', label: 'Skills & Experience', icon: <FaCode /> },
     { path: '/project', label: 'Projects', icon: <FaProjectDiagram /> },
     { path: '/education', label: 'Education', icon: <FaGraduationCap /> },
-    { path: '/about', label: 'About', icon: <FaUser /> },
     { path: '/contactMe', label: 'Contact Me', icon: <FaEnvelope /> },
   ];
 
@@ -83,7 +83,7 @@ const Navbar = () => {
                     INDUSTRY-GRADE RESUME BUTTON
                   ============================ */}
               <a
-                href="https://drive.google.com/file/d/1R1zDIoRTQRohPXYzXCsw_nzGLrSGSSFx/view?usp=sharing"
+                href="https://drive.google.com/file/d/1GovMQ4978hTf_qZ3gGD8mm38KQg-AfeY/view?usp=sharing"
                 download
                 className="flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500 text-blue-400 hover:text-white 
                 hover:bg-blue-600/20 backdrop-blur-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/20"
