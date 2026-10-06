@@ -1,6 +1,5 @@
 import React from 'react';
 import ArrowUpIcon from '../assets/arrow-up.svg';
-import { AiFillLinkedin } from "react-icons/ai";
 
 const LetsConnect = () => {
   const handleClick = () => {
@@ -14,7 +13,7 @@ const LetsConnect = () => {
   return (
     <div
       onClick={handleClick}
-      className="flex justify-center items-center w-[140px] h-[140px] rounded-full bg-#0a0a0a p-[2px] cursor-pointer border-2 border-white"
+      className="flex justify-center items-center w-[140px] h-[140px] rounded-full bg-[#0a0a0a] p-[2px] cursor-pointer border-2 border-white"
     >
       <div className="flex flex-col justify-center items-center bg-primary w-full h-full rounded-full">
         <div className="flex items-center space-x-2">
@@ -26,13 +25,11 @@ const LetsConnect = () => {
             alt="arrow up"
             className="w-[23px] h-[23px]"
           />
-
         </div>
         <div className="mt-1">
           <span className="font-poppins font-medium text-[18px] leading-[23px] text-white">
             Connect
           </span>
-          
         </div>
       </div>
     </div>

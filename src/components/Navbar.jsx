@@ -35,6 +35,11 @@ const Navbar = () => {
     { path: '/contactMe', label: 'Contact Me', icon: <FaEnvelope /> },
   ];
 
+  // Correct Google Drive download link
+  // Correct Google Drive links
+const resumeViewUrl = "https://drive.google.com/file/d/1ctILj-w3f1TxjQJZPYzdf9eUAO9_NL3s/view?usp=sharing";
+const resumeDownloadUrl = "https://drive.google.com/uc?export=download&id=1ctILj-w3f1TxjQJZPYzdf9eUAO9_NL3s";
+
   return (
     <>
       <nav className="fixed top-0 w-full z-50 bg-[rgba(10,10,10,0.95)] backdrop-blur-lg border-b border-white/10 shadow-lg">
@@ -83,29 +88,30 @@ const Navbar = () => {
                     INDUSTRY-GRADE RESUME BUTTON
                   ============================ */}
               <a
-                href="https://drive.google.com/file/d/1ctILj-w3f1TxjQJZPYzdf9eUAO9_NL3s/view"
-                download
-                className="flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500 text-blue-400 hover:text-white 
-                hover:bg-blue-600/20 backdrop-blur-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/20"
-              >
-                <span className="text-sm font-medium">Resume</span>
+  href={resumeViewUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500 text-blue-400 hover:text-white 
+  hover:bg-blue-600/20 backdrop-blur-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/20"
+>
+  <span className="text-sm font-medium">Resume</span>
 
-                {/* Minimal download icon */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.7}
-                  stroke="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 16.5l4.5-4.5m-4.5 4.5L7.5 12m4.5 4.5V3"
-                  />
-                </svg>
-              </a>
+  {/* Minimal download icon */}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.7}
+    stroke="currentColor"
+    className="w-4 h-4"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 16.5l4.5-4.5m-4.5 4.5L7.5 12m4.5 4.5V3"
+    />
+  </svg>
+</a>
             </div>
 
           </div>
@@ -169,12 +175,13 @@ const Navbar = () => {
         ============================ */}
         <div className="p-6 border-t border-gray-700">
           <a
-            href="https://drive.google.com/file/d/1ctILj-w3f1TxjQJZPYzdf9eUAO9_NL3s/view"
-            target="_blank"
-            className="block w-full text-center py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition shadow-md shadow-blue-600/20"
-          >
-            Resume
-          </a>
+  href={resumeViewUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block w-full text-center py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition shadow-md shadow-blue-600/20"
+>
+  Resume
+</a>
         </div>
       </div>
 

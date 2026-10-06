@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   FaGithub,
   FaLinkedin,
@@ -13,29 +12,25 @@ const SocialLinks = () => {
       url: "https://github.com/aryankardam",
       name: "GitHub",
     },
-
     {
       icon: <FaLinkedin />,
       url: "https://www.linkedin.com/in/aryan-kardam-b94b16296/",
       name: "LinkedIn",
     },
-
     {
       icon: <FaInstagram />,
-      url: "https://www.instagram.com/aryan_kardam?stkn=MXdtcmtxb3QxdDZ2bQ==",
+      url: "https://www.instagram.com/aryan_kardam/",
       name: "Instagram",
     },
   ];
 
   return (
     <div>
-
       <h4 className="text-lg font-semibold text-white mb-5">
         Let's Connect
       </h4>
 
       <div className="flex gap-5">
-
         {links.map((item, index) => (
           <a
             key={index}
@@ -48,9 +43,7 @@ const SocialLinks = () => {
             {item.icon}
           </a>
         ))}
-
       </div>
-
     </div>
   );
 };
