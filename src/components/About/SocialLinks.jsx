@@ -10,19 +10,19 @@ const SocialLinks = () => {
   const links = [
     {
       icon: <FaGithub />,
-      url: "https://github.com/YOUR_USERNAME",
+      url: "https://github.com/aryankardam",
       name: "GitHub",
     },
 
     {
       icon: <FaLinkedin />,
-      url: "https://linkedin.com/in/YOUR_USERNAME",
+      url: "https://www.linkedin.com/in/aryan-kardam-b94b16296/",
       name: "LinkedIn",
     },
 
     {
       icon: <FaInstagram />,
-      url: "https://instagram.com/YOUR_USERNAME",
+      url: "https://www.instagram.com/aryan_kardam?stkn=MXdtcmtxb3QxdDZ2bQ==",
       name: "Instagram",
     },
   ];

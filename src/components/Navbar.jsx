@@ -83,7 +83,7 @@ const Navbar = () => {
                     INDUSTRY-GRADE RESUME BUTTON
                   ============================ */}
               <a
-                href="https://drive.google.com/file/d/1GovMQ4978hTf_qZ3gGD8mm38KQg-AfeY/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ctILj-w3f1TxjQJZPYzdf9eUAO9_NL3s/view"
                 download
                 className="flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500 text-blue-400 hover:text-white 
                 hover:bg-blue-600/20 backdrop-blur-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/20"
@@ -169,7 +169,7 @@ const Navbar = () => {
         ============================ */}
         <div className="p-6 border-t border-gray-700">
           <a
-            href="https://drive.google.com/file/d/1R1zDIoRTQRohPXYzXCsw_nzGLrSGSSFx/view?usp=sharing"
+            href="https://drive.google.com/file/d/1ctILj-w3f1TxjQJZPYzdf9eUAO9_NL3s/view"
             target="_blank"
             className="block w-full text-center py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition shadow-md shadow-blue-600/20"
           >

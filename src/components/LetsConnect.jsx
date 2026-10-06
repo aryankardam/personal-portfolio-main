@@ -5,7 +5,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 const LetsConnect = () => {
   const handleClick = () => {
     window.open(
-      'https://www.linkedin.com/in/aryan-kardam-b94b16296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      'https://www.linkedin.com/in/aryan-kardam-b94b16296/',
       '_blank',
       'noopener,noreferrer'
     );

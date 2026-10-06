@@ -20,7 +20,7 @@ const CTAButtons = () => {
       {/* Resume */}
 
       <a
-              href="https://drive.google.com/file/d/1GovMQ4978hTf_qZ3gGD8mm38KQg-AfeY/view?usp=sharing"
+              href="https://drive.google.com/file/d/1ctILj-w3f1TxjQJZPYzdf9eUAO9_NL3s/view"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-md hover:bg-blue-700 transition duration-300"
